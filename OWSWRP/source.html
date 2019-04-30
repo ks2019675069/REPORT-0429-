@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <title>출처</title>
+  <script type="text/javascript">
+    var c = 0;
+
+    function timeCount() {
+      var n;
+      c = c + 1;
+      n = c % 6;
+
+      switch (n) {
+        case 1:
+          document.getElementById('here').innerHTML = "The page changes after 5 seconds. Please wait.";
+          break;
+        case 2:
+          document.getElementById('here').innerHTML = "The page changes after 4 seconds. Please wait.";
+          break;
+        case 3:
+          document.getElementById('here').innerHTML = "The page changes after 3 seconds. Please wait.";
+          break;
+        case 4:
+          document.getElementById('here').innerHTML = "The page changes after 2 seconds. Please wait.";
+          break;
+        case 5:
+          document.getElementById('here').innerHTML = "The page changes after 1 seconds. Please wait.";
+          break;
+        default:
+          document.getElementById('here').innerHTML = "";
+      }
+
+      t = setTimeout("timeCount()", 1000);
+    }
+  </script>
+</head>
+
+<body onload="timeCount()"
+  style="display: flex; flex-direction: row; height: 100%; background-size: 100%; background-image: url(complete.gif); ">
+  <div>
+    <div style="font-family:respective; font-size: 30px">
+      <h1>
+        <div id="here"></div>
+      </h1>
+      <h1>
+        <div id="there"></div>
+      </h1>
+      <div>
+      </div>
+    </div>
+    
+    <meta http-equiv='refresh' content='5.0;url=head.html'>
+</body>
+
+</html>
